@@ -1,0 +1,81 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type="text"],
+select,
+input[type="range"] {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.pet-display {
+  width: 320px;
+  height: 320px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#pet-name-text {
+  transition: fill 0.3s ease, filter 0.3s ease;
+  user-select: none;
+}
+
+#pet-name-text:hover {
+  fill: #ff6f61;
+  filter: drop-shadow(0 0 6px #ff6f61);
+}
+
+/* Tail sway animation */
+@keyframes tail-sway {
+  0%, 100% {
+    transform: rotate(0deg);
+    transform-origin: 140px 280px;
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+
+#tail {
+  animation: tail-sway 3s ease-in-out infinite;
+  transform-origin: 140px 280px;
+}

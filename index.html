@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fantasy Pet Customizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Fantasy Pet Customizer</h1>
+  <div class="container">
+    <form id="pet-form">
+      <label for="pet-name">Pet Name:</label>
+      <input type="text" id="pet-name" name="petName" placeholder="Enter pet name" maxlength="20" />
+
+      <label for="shape">Shape:</label>
+      <select id="shape" name="shape">
+        <option value="round">Round</option>
+        <option value="square">Square</option>
+        <option value="triangle">Triangle</option>
+      </select>
+
+      <label for="eye-size">Eye Size:</label>
+      <input type="range" id="eye-size" name="eyeSize" min="5" max="30" value="15" />
+
+      <label for="wing-style">Wing Style:</label>
+      <select id="wing-style" name="wingStyle">
+        <option value="none">None</option>
+        <option value="feathered">Feathered</option>
+        <option value="bat">Bat</option>
+      </select>
+
+      <label for="tail-length">Tail Length:</label>
+      <input type="range" id="tail-length" name="tailLength" min="10" max="60" value="30" />
+    </form>
+
+    <div class="pet-display">
+      <svg id="pet-svg" width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-label="Fantasy Pet">
+        <!-- Pet body -->
+        <circle id="body" cx="150" cy="150" r="80" fill="#a0c4ff" />
+        <!-- Eyes -->
+        <circle id="left-eye" cx="110" cy="130" r="15" fill="#fff" />
+        <circle id="right-eye" cx="190" cy="130" r="15" fill="#fff" />
+        <circle id="left-pupil" cx="110" cy="130" r="7" fill="#000" />
+        <circle id="right-pupil" cx="190" cy="130" r="7" fill="#000" />
+        <!-- Wings -->
+        <path id="wing-left" d="M70 150 Q50 100 90 90" fill="#bde0fe" />
+        <path id="wing-right" d="M230 150 Q250 100 210 90" fill="#bde0fe" />
+        <!-- Tail -->
+        <path id="tail" d="M150 230 Q160 270 140 280" stroke="#a0c4ff" stroke-width="10" fill="none" />
+        <!-- Pet Name -->
+        <text id="pet-name-text" x="150" y="280" text-anchor="middle" font-size="24" fill="#333" pointer-events="auto" style="cursor: default;">Your Pet</text>
+      </svg>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
