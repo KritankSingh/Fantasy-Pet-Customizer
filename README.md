@@ -1,2 +1,11 @@
-# Fantasy-Pet-Customizer
-Create your own animated fantasy pet with sliders and selectors.
+# Fantasy Pet Creator
+
+Design mythical pets and watch them animate in real-time.
+
+## Features
+- Live SVG updates
+- Trait-based customizations
+- Animated idle movement
+
+## Use
+Adjust sliders to bring your pet to life.
